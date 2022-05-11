@@ -1,2 +1,3 @@
 # random_boj
-그냥 백준 저장용
+
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=saywoo)](https://solved.ac/saywoo/)
