@@ -2,7 +2,7 @@
 using namespace std;
 
 int n;
-string str;
+vector<int> a, b, c;
 
 int main()
 {
@@ -10,14 +10,16 @@ int main()
     cin.tie(0); cout.tie(0);
 
     cin >> n;
-    cin >> str;
+    a.resize(n + 1); b.resize(n + 1); c.resize(n + 1);
 
-    bool ok = false;
+    for (int i = 1; i <= n; i++) cin >> a[i];
+    for (int i = 1; i <= n; i++) cin >> b[i];
 
-    n--;
-    if (str[n] == 'q'  || str[n] == 'r' || str[n] == 'w' || str[n] == 'e' || str[n] == 't' || str[n] == 'a' ||
-    str[n] == 's' || str[n] == 'd' ||str[n] == 'f' || str[n] == 'g' || str[n] == 'z' || str[n] == 'x' || str[n] == 'c' || str[n] == 'v') ok = true;
-    if (ok) cout << 1 << '\n';
-    else cout << 0 << '\n';
+    for (int i = 1; i <= n; i++) {
+        if (a[i] != b[i]) c[i] = true;
+    }
+
+    for (int i = 1; i <= n; i++) cout << c[i] << " ";
+    
     return 0;
 }
