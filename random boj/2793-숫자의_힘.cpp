@@ -18,23 +18,13 @@ int main()
     }
 
     cin >> n >> m;
-
-    ll x = n - 1; ll y = m;
+    n--;
 
     for (ll i = 2; v <= m; i++) {
-        if (v % i == 0) continue;
-        else {
-            ll tmp = i;
-            for (ll j = 2; j < i; j++) {
-                if (tmp % j == 0) tmp /= j;
-            }
-            v *= tmp;
-            ll a = x - (n - 1) / v; ll b = y - m / v;
-            // cout << i << " " << v << " " << b - a << " " << dp[i] + 1 << '\n';
-            ans += (b - a) * (dp[i] + 1);
-
-            x = (n - 1) / v; y = m / v;
-        }
+        ll tmp = i * v / __gcd(i, v);
+        ans += (m / v - n / v) * (dp[i] + 1);
+        v = tmp;
+        ans -= (m / v - n / v) * (dp[i] + 1);
     }
 
     cout << ans << '\n';
