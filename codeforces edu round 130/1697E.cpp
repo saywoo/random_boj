@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, a, b, ans = 1e9;
+int n;
 
 int main()
 {
@@ -11,12 +11,9 @@ int main()
     cin >> n;
 
     for (int i = 0; i < n; i++) {
-        cin >> a >> b;
-        if (a <= b) ans = min(ans, b);
+        
     }
-    
-    if (ans != 1e9) cout << ans << '\n';
-    else cout << -1 << '\n';
+
 
     return 0;
 }
