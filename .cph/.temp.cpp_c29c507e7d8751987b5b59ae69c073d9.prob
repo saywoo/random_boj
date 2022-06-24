@@ -1,1 +1,0 @@
-{"name":"Local: temp","url":"d:\\ps\\random_boj\\temp.cpp","tests":[{"id":1654605234812,"input":"3\n10 20\n15 18\n20 15","output":"18"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ps\\random_boj\\temp.cpp","group":"local","local":true}
